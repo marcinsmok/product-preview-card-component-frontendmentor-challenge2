@@ -10,6 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     min-height: 100vh;
     width: 100vw;
     background-color: hsl(30, 38%, 92%);
@@ -112,4 +113,49 @@ button {
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+
+    body {
+        flex-direction: column;
+        max-width: 100vw;
+        max-height: 100vh;
+
+    }
+    main {
+        display: flex;
+        flex-direction: row;
+        height: 50vh;
+        width: 30%;
+
+    }
+
+    .product-picture {
+        width: 60%;
+        height: 100%;
+        background-image: url("/images/image-product-desktop.jpg");
+        border-radius: 3% 0 0 3%;
+    }
+    .product-des {
+        margin: 1vw;
+        width: 50%;
+        height: 100%;
+
+    }
+    .category {
+        letter-spacing: 0.7vh;
+    
+    }
+
+    button {
+        line-height: 3em;
+ 
+    }
+
+    button:hover {
+        background-color: hsl(158, 36%, 20%);
+        cursor: pointer;
+
+    }
 }
